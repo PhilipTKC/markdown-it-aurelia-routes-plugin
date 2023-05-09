@@ -1,0 +1,23 @@
+{
+  "name": "markdown-it-au-external-links",
+  "author": "Philip Thongkhamchanh <philip@thongkhamchanh.me> (https://thongkhamchanh.me)",
+  "version": "1.0.0",
+  "description": "A Markdown-it plugin that adds the external and target attribute to external links when using markdown-it in Aurelia",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/markdown-it": "^12.2.3",
+    "@types/node": "^20.1.1",
+    "rimraf": "^5.0.0",
+    "terser": "^5.17.2",
+    "typescript": "^5.0.4"
+  },
+  "dependencies": {
+    "markdown-it": "^13.0.1"
+  },
+  "scripts": {
+    "clean": "rimraf ./dist",
+    "build": "npm run clean && tsc && npm run minify:js",
+    "minify:js": "terser dist/index.js -o dist/index.min.js"
+  },
+  "main": "dist/index.min.js"
+}
