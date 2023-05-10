@@ -1,8 +1,8 @@
 {
-  "name": "markdown-it-au-external-links",
+  "name": "markdown-it-aurelia-routes-plugin",
   "author": "Philip Thongkhamchanh <philip@thongkhamchanh.me> (https://thongkhamchanh.me)",
   "version": "1.0.0",
-  "description": "A Markdown-it plugin that adds the external and target attribute to external links when using markdown-it in Aurelia",
+  "description": "A Markdown-it plugin that handles aurelia routes with using markdown",
   "license": "MIT",
   "devDependencies": {
     "@types/markdown-it": "^12.2.3",

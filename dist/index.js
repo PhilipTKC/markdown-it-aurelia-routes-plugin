@@ -1,21 +1,31 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.auExternalLinks = void 0;
+exports.aureliaRoutesPlugin = void 0;
 /**
-* A plugin for markdown-it that adds a custom attribute to external links
-* This plugin should be used when using markdown-it in an Aurelia application to automatically append the external and target attribute
+* Aurelia Route Plugin
+*
+* This plugin adds the load attribute to links that start with "/". This allows Aurelia to handle internal routes.
+*
+* It also adds the external and target attributes to links that start with "http" or "https". This allows Aurelia to handle external links.
 */
-const auExternalLinks = (md) => {
-    const defaultRender = md.renderer.rules.link_open || function (tokens, idx, options, env, self) {
-        return self.renderToken(tokens, idx, options);
-    };
+const aureliaRoutesPlugin = (md) => {
+    // Regular expression to match links with a href starting with "/"
+    const linkRegex = /\[([^\]]+)\]\((\/[^)]+)\)/g;
     md.renderer.rules.link_open = (tokens, idx, options, env, self) => {
         const href = tokens[idx].attrGet('href');
-        if ((href === null || href === void 0 ? void 0 : href.startsWith('http')) || (href === null || href === void 0 ? void 0 : href.startsWith('https'))) {
+        // If the href starts with "/", add the load attribute
+        if (href && href.startsWith('/')) {
+            tokens[idx].attrSet('load', href);
+        }
+        // If the href starts with "http" or "https", add the external and target attributes
+        else if (href && (href.startsWith('http') || href.startsWith('https'))) {
             tokens[idx].attrSet('external', '');
             tokens[idx].attrSet('target', '_blank');
         }
-        return defaultRender(tokens, idx, options, env, self);
+        return self.renderToken(tokens, idx, options);
     };
+    md.core.ruler.before('normalize', 'aurelia-routes', (state) => {
+        state.src = state.src.replace(linkRegex, '<a load="$2" href="$2">$1</a>');
+    });
 };
-exports.auExternalLinks = auExternalLinks;
+exports.aureliaRoutesPlugin = aureliaRoutesPlugin;
