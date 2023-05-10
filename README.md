@@ -1,10 +1,10 @@
-# Markdown It Aurelia External Links
+# Markdown It Aurelia Routes Plugin
 
 Aurelia by default will allow you to use href and load for specifying routes.
 
 ## Usage
 
-### Without the plugin
+### Without the plugin (External Links)
 
 ```md
 [Aurelia](https://github.com/aurelia/aurelia)
@@ -12,14 +12,23 @@ Aurelia by default will allow you to use href and load for specifying routes.
 Renders
 
 <a href="https://github.com/aurelia/aurelia">Aurelia</a>
-
 ```
 
 ```md
 Error: Instruction parser error: Children without parent in instruction part
 ```
 
-### With the plugin
+### Without the Plugin (Internal Links)
+
+The plugin will not add the load attribute to internal routes which will cause a page refresh.
+
+```md
+[HomePage](/home)
+
+<a href="/home">Home</a>
+```
+
+### With the plugin (External Links)
 
 ```md
 [Aurelia](https://github.com/aurelia/aurelia)
@@ -28,6 +37,18 @@ Renders
 
 <a href="https://github.com/aurelia/aurelia" external target="_blank">Aurelia</a>
 ```
+
+### With the Plugin (Internal Links)
+
+This plugin will automatically add the load attribute to internal routes
+
+```
+[HomePage](/homepage)
+
+<a href="/home">Home</a>
+```
+
+### Alternatives
 
 Otherwise, you can set useHref to false without the need for the plugin.
 
