@@ -2,7 +2,6 @@ lockfileVersion: 5.4
 
 specifiers:
   '@types/markdown-it': ^12.2.3
-  '@types/node': ^20.1.1
   markdown-it: ^13.0.1
   rimraf: ^5.0.0
   terser: ^5.17.2
@@ -13,7 +12,6 @@ dependencies:
 
 devDependencies:
   '@types/markdown-it': 12.2.3
-  '@types/node': 20.1.1
   rimraf: 5.0.0
   terser: 5.17.2
   typescript: 5.0.4
@@ -93,10 +91,6 @@ packages:
 
   /@types/mdurl/1.0.2:
     resolution: {integrity: sha512-eC4U9MlIcu2q0KQmXszyn5Akca/0jrQmwDRgpAMJai7qBWq4amIQhZyNau4VYGtCeALvW1/NtjzJJ567aZxfKA==}
-    dev: true
-
-  /@types/node/20.1.1:
-    resolution: {integrity: sha512-uKBEevTNb+l6/aCQaKVnUModfEMjAl98lw2Si9P5y4hLu9tm6AlX2ZIoXZX6Wh9lJueYPrGPKk5WMCNHg/u6/A==}
     dev: true
 
   /acorn/8.8.2:

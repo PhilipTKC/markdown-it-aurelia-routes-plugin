@@ -6,7 +6,6 @@
   "license": "MIT",
   "devDependencies": {
     "@types/markdown-it": "^12.2.3",
-    "@types/node": "^20.1.1",
     "rimraf": "^5.0.0",
     "terser": "^5.17.2",
     "typescript": "^5.0.4"

@@ -1,6 +1,5 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.aureliaRoutesPlugin = void 0;
 /**
 * Aurelia Route Plugin
 *
@@ -28,4 +27,4 @@ const aureliaRoutesPlugin = (md) => {
         state.src = state.src.replace(linkRegex, '<a load="$2" href="$2">$1</a>');
     });
 };
-exports.aureliaRoutesPlugin = aureliaRoutesPlugin;
+exports.default = aureliaRoutesPlugin;
