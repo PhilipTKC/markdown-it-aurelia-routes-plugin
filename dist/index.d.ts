@@ -1,4 +1,4 @@
-import MarkdownIt from 'markdown-it';
+import { PluginSimple } from 'markdown-it';
 /**
 * Aurelia Route Plugin
 *
@@ -6,5 +6,5 @@ import MarkdownIt from 'markdown-it';
 *
 * It also adds the external and target attributes to links that start with "http" or "https". This allows Aurelia to handle external links.
 */
-declare const aureliaRoutesPlugin: (md: MarkdownIt) => void;
+declare const aureliaRoutesPlugin: PluginSimple;
 export default aureliaRoutesPlugin;

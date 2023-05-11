@@ -1,4 +1,4 @@
-import MarkdownIt from 'markdown-it';
+import MarkdownIt, { PluginSimple } from 'markdown-it';
 import Renderer from 'markdown-it/lib/renderer';
 import Token from 'markdown-it/lib/token';
 
@@ -9,7 +9,7 @@ import Token from 'markdown-it/lib/token';
 * 
 * It also adds the external and target attributes to links that start with "http" or "https". This allows Aurelia to handle external links.
 */
-const aureliaRoutesPlugin = (md: MarkdownIt) => {
+const aureliaRoutesPlugin: PluginSimple = (md: MarkdownIt) => {
     // Regular expression to match links with a href starting with "/"
     const linkRegex = /\[([^\]]+)\]\((\/[^)]+)\)/g;
 
