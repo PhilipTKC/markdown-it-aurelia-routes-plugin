@@ -1,5 +1,7 @@
 # Markdown It Aurelia Routes Plugin
 
+## Plugin no longer required.
+
 ## Description
 
 Created for [Quick-Start](https://github.com/PhilipTKC/quick-start)
