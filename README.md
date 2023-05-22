@@ -1,6 +1,8 @@
 # Markdown It Aurelia Routes Plugin
 
-Aurelia by default will allow you to use href and load for specifying routes.
+## Description
+
+Created for [Quick-Start](https://github.com/PhilipTKC/quick-start)
 
 ## Usage
 
