@@ -1,10 +1,10 @@
 # Markdown It Aurelia Routes Plugin
 
-## Plugin no longer required.
+Plugin created for [Quick-Start](https://github.com/PhilipTKC/quick-start)
 
 ## Description
 
-Created for [Quick-Start](https://github.com/PhilipTKC/quick-start)
+Allows Aurelia to handle internal and external routes correctly in Markdown.
 
 ## Usage
 
